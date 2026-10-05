@@ -1,4 +1,4 @@
-import { contactInfo } from "@/lib/config/site-config";
+import { contactInfo, siteConfig } from "@/lib/config/site-config";
 
 const LINKS = contactInfo;
 
@@ -31,7 +31,7 @@ function Icon({ name }: { name: (typeof LINKS)[number]["icon"] }) {
 export default function Footer() {
   return (
     <footer className="fixed bottom-0 left-0 right-0 flex items-center justify-center gap-4 bg-slate-900/50 p-2 text-sm text-slate-400 backdrop-blur">
-      <span className="font-semibold">MEGADASH - SESI SENAI MEGAZORD #7563</span>
+      <span className="font-semibold">{siteConfig.teamName}</span>
       <nav className="flex items-center gap-3" aria-label="socialRedes">
         {LINKS.map((l) => (
           <a

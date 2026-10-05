@@ -1,6 +1,11 @@
 export const siteConfig = {
   name: "Megadash",
   description: "FRC dashboard for NetworkTables v4 from megazord 7563",
+  teamName: "SESI SENAI MEGAZORD #7563",
+  teamNumber: 7563,
+  teamRegion: "Brazil",
+  teamCity: "São Paulo",
+  teamShortName: "MegaZord",
   foundedYear: 2019,
 };
 
