@@ -9,9 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ntcore-ts/client": "^1.0.0",
+    "@ntcore-ts/react": "^1.0.0",
     "next": "16.3.8",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
