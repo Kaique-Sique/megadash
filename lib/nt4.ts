@@ -60,7 +60,7 @@ export class NT4Client {
 
   private connect(): void {
     if (this.closed) return;
-    const url = `ws://${this.host}:5810/nt/FRCDash_${this.clientId}`;
+    const url = `ws://${this.host}:5810/nt/megadash_${this.clientId}`;
     const ws = new WebSocket(url, "networktables.first.wpi.edu");
     ws.binaryType = "arraybuffer";
     ws.onopen = () => {
