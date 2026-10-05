@@ -3,12 +3,6 @@ setlocal
 title Megadash (dev)
 cd /d "%~dp0"
 
-where node >nul 2>nul
-if errorlevel 1 (
-  echo Node.js not found. Please install it from https://nodejs.org and try again.
-  pause
-  exit /b 1
-)
 
 if not exist node_modules (
   echo installing dependencies...
