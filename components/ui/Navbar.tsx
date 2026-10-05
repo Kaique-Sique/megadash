@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <span className="flex shrink-0 items-center gap-2 text-xs text-slate-400" title={`${host}:5810`}>
           <span className={`size-2 rounded-full ${connected ? "bg-emerald-400" : "bg-amber-400"}`} />
-          <span className="hidden sm:inline">{connected ? "Conectado" : "Desconectado"} · {settings.mode === "simulation" ? "Simulação" : "Robô"}</span>
+          <span className="hidden sm:inline">{connected ? "Connected" : "Disconnected"} · {settings.mode === "simulation" ? "Simulation" : "Real Robot"}</span>
         </span>
 
         <Link href="/settings" className={`${cls("/settings")} flex items-center gap-2`} aria-current={isActive("/settings") ? "page" : undefined}>
