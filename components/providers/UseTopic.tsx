@@ -11,3 +11,29 @@ export function useTopic<T = unknown>(name: string) {
     set: (v: T) => set(name, v),
   };
 }
+
+/**
+ * Usage example:
+ * 
+ * "use client";
+import { useTopic } from "@/lib/nt4/useTopic";
+
+export default function Teleop() {
+  const rpm = useTopic<number>("/SmartDashboard/Shooter/TargetRPM");
+  const enabled = useTopic<boolean>("/SmartDashboard/Shooter/Enabled");
+
+  return (
+    <>
+      <p>RPM atual: {rpm.value ?? "—"}</p>
+      <input
+        type="number"
+        defaultValue={rpm.value}
+        onKeyDown={(e) => e.key === "Enter" && rpm.set(Number(e.currentTarget.value))}
+      />
+      <button onClick={() => enabled.set(!enabled.value)}>
+        {enabled.value ? "Desligar" : "Ligar"}
+      </button>
+    </>
+  );
+}
+ */
