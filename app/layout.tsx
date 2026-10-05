@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FRC Dash",
-  description: "Dashboard NetworkTables 4 para FRC",
+  title: "Megadash",
+  description: "FRC dashboard for NetworkTables v4 from megazord 7563",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
