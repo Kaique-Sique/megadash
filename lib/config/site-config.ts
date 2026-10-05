@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Megadas",
+  name: "Megadash",
   description: "FRC dashboard for NetworkTables v4 from megazord 7563",
   foundedYear: 2019,
 };
