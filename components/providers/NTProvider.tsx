@@ -9,14 +9,14 @@ export interface Settings { mode: Mode; team: number; }
 const KEY = "megadash:settings";
 const DEFAULTS: Settings = { mode: "real", team: siteConfig.teamNumber };
 
-/** Simulação usa o servidor local da WPILib; modo real usa o IP do roboRIO (10.TE.AM.2). */
+/** simulation uses the local WPILib server; real mode uses the roboRIO IP (10.TE.AM.2). */
 export const hostFor = (s: Settings) =>
   s.mode === "simulation" ? "localhost" : `10.${Math.floor(s.team / 100)}.${s.team % 100}.2`;
 
 type NTContext = ReturnType<typeof NTclient> & {
   settings: Settings;
   host: string;
-  ready: boolean; // true depois de ler as configurações salvas
+  ready: boolean; // true 
   update: (patch: Partial<Settings>) => void;
 };
 const Ctx = createContext<NTContext | null>(null);
